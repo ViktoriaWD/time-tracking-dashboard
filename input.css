@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Playfair+Display&family=Poppins:wght@400;700&family=Rubik:wght@300;400;500&family=Space+Grotesk:wght@500&display=swap");
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.first {
+  background-color: hsl(235, 46%, 20%);
+ 
+}
+
+/* Mobile Layout */
+/* @media (max-width: 640px) {
+  .dashboard {
+    
+    grid-template-rows: repeat(7, 1fr);
+  }
+} */
+
+/* Desktop Layout for 1440px */
+@media (min-width: 1024px) {
+  .dashboard {
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Three columns */
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .box.first {
+    height: 100%; /* Vertical long container */
+  }
+
+  .first {
+    grid-row: span 2; /* The first box spans two rows */
+  }
+
+  .box:not(:first) {
+    grid-column: span 1; /* Rest of the boxes span one column */
+  }
+}

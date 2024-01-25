@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Playfair+Display&family=Poppins:wght@400;700&family=Rubik:wght@300;400;500&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-veryDarkBlue">
+
+  <div
+  class="dashboard m-auto px-6 py-10  overflow-auto md:px-0 md:w-[77%] md:pt-[80px]"
+>
+  <div class="box first rounded-xl">
+    <div class="user-card">
+      <div
+        class="user-profil-card flex justify-around items-center w-full px-7 py-8 rounded-xl bg-indigo-700 md:gap-9 md:flex md:flex-col md:items-left md:justify-start md:px-0 md:py-0 md:pt-8 md:pb-20"
+      >
+        <div class="profil-pic">
+          <img
+            src="../images/image-jeremy.png"
+            alt="profil-pic"
+            class="rounded-full w-[69px] h-[69px] border-[3px] md:mr-[120px] border-white md:w-[85px] md:h-[85px]"
+          />
+        </div>
+        <div
+          class="profil-info font-rubik font-thin flex flex-col justify-start text-left md:pl-8 md:gap-1"
+        >
+          <p class="text-sm text-paleBlue md:font-normal">Report for</p>
+          <h1
+            class="text-2xl md:text-[38px] md:font-thin  text-zinc-300 md:tracking-wider md:leading-tight"
+          >
+            Jeremy Robson
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="user-card-menu flex justify-between pl-9 pr-5 md:flex-col md:items-start md:pl-9 ">
+      <a
+        href="#daily"
+        id="daily-link"
+        class=" daily pb-6 pt-5 font-rubik text-lg text-desaturatedBlue cursor-pointer hover:text-white md:pb-0 md:pt-8"
+        >Daily</a
+      >
+      <a
+        href="#weekly"
+        id="weekly-link"
+        class=" weekly pb-6 pt-5 font-rubik text-lg text-desaturatedBlue cursor-pointer hover:text-white md:pb-0 md:pt-3"
+        >Weekly</a
+      >
+      <a
+        href="#monthly"
+        id="monthly-link"
+        class=" monthly pb-6 pt-5 font-rubik text-lg text-desaturatedBlue cursor-pointer hover:text-white md:pb-8 md:pt-3"
+        >Monthly</a
+      >
+    </div>
+
+  </div>
+  <div class="card  relative rounded-xl h-[160px] bg-lightRedWork overflow-hidden md:h-[245px]">
+    <img src="images/icon-work.svg" alt="icon" class="ml-[230px] -mt-3 relative z-0 md:ml-[160px]" />
+        <div class="card-info bg-darkBlue h-[80%]  rounded-xl flex justify-between cursor-pointer hover:bg-desaturatedBlue hover:text-white hover:font-extrablack relative -top-7 md:-top-[18px] md:flex-col md:justify-center">
+          <a href="#ellipsis" class="ellipsis-icon hidden md:flex  top-0 right-0 mt-8 mr-6 md:mt-0 md:mr-0 md:ml-[210px]">
+            <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+          </a>
+          <div class="left-side text-white font-rubik ml-6 mb-4 flex flex-col justify-center md:-mt-4 md:ml-8">
+            <p class="text-lg ">Work</p>
+            <h1 class="text-3xl font-extralight mt-1 md:mt-10 md:text-[50px] md:tracking-wide md:font-[100]">32<span>hrs</span></h1>
+          </div>
+          
+          <div class="right-side flex flex-col gap-3 justify-center items-center pl-8 pr-6 relative md:justify-start md:items-start md:pl-4">
+            <a href="#ellipsis" class="ellipsis-icon absolute md:hidden top-0 right-0 mt-8 mr-6 md:mt-0 md:mr-0 md:ml-[210px]">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+            </a>
+            <div class="flex text-paleBlue font-rubik text-sm font-thin tracking-wider mt-4 ml-4 cursor-pointer md:mt-0 ">
+              <div class="past-time">Last Week -</div>
+              <div class="time-in-h font-rubik text-sm">36<span>hrs</span></div>
+            </div>
+          </div>
+          
+        </div>
+     
+  
+  </div>
+
+  <div class="card  relative rounded-xl h-[160px] bg-softBluePlay overflow-hidden md:h-[245px]">
+    <img src="images/icon-play.svg" alt="icon" class="ml-[230px] -mt-3 relative z-0 md:ml-[160px]" />
+        <div class="card-info bg-darkBlue h-[80%]  rounded-xl flex justify-between cursor-pointer hover:bg-desaturatedBlue hover:text-white hover:font-extrablack relative -top-7 md:-top-4 md:flex-col md:justify-center">
+          <a href="#ellipsis" class="ellipsis-icon hidden md:flex  top-0 right-0 mt-8 mr-6 md:mt-0 md:mr-0 md:ml-[210px]">
+            <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+          </a>
+          <div class="left-side text-white font-rubik ml-6 mb-4 flex flex-col justify-center md:-mt-4 md:ml-8">
+            <p class="text-lg ">Play</p>
+            <h1 class="text-3xl font-extralight mt-1 md:mt-10 md:text-[50px] md:tracking-wide md:font-[100] ">10<span>hrs</span></h1>
+          </div>
+          
+          <div class="right-side flex flex-col gap-3 justify-center items-center pl-8 pr-6 relative md:justify-start md:items-start md:pl-4">
+            <a href="#ellipsis" class="ellipsis-icon absolute top-0 right-0 mt-8 mr-6 md:hidden">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+            </a>
+            <div class="flex text-paleBlue font-rubik text-sm font-thin tracking-wider mt-4 ml-4 cursor-pointer md:mt-0 ">
+              <div class="past-time">Last Week -</div>
+              <div class="time-in-h font-rubik text-sm">8<span>hrs</span></div>
+            </div>
+          </div>
+          </div>
+     </div>
+
+  <div class="card  relative rounded-xl h-[160px] bg-lightRedStudy overflow-hidden md:h-[245px]">
+    <img src="images/icon-study.svg" alt="icon" class="ml-[230px] -mt-3 relative z-0  md:ml-[160px]" />
+        <div class="card-info bg-darkBlue h-[80%] rounded-xl flex justify-between cursor-pointer hover:bg-desaturatedBlue hover:text-white hover:font-extrablack relative -top-7 md:-top-[18px] md:flex-col md:justify-center">
+          <a href="#ellipsis" class="ellipsis-icon hidden md:flex  top-0 right-0 mt-8 mr-6 md:mt-0 md:mr-0 md:ml-[210px]">
+            <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+          </a>
+          <div class="left-side text-white font-rubik ml-6 mb-4 flex flex-col justify-center md:-mt-4 md:ml-8">
+            <p class="text-lg ">Study</p>
+            <h1 class="text-3xl font-extralight mt-1 md:mt-10 md:text-[50px] md:tracking-wide md:font-[100]">4<span>hrs</span></h1>
+          </div>
+          
+          <div class="right-side flex flex-col gap-3 justify-center items-center pl-8 pr-6 relative md:justify-start md:items-start md:pl-4">
+            <a href="#ellipsis" class="ellipsis-icon absolute md:hidden  top-0 right-0 mt-8 mr-6">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+            </a>
+            <div class="flex text-paleBlue font-rubik text-sm font-thin tracking-wider mt-4 ml-4 cursor-pointer md:mt-0 ">
+              <div class="past-time">Last Week -</div>
+              <div class="time-in-h font-rubik text-sm">7<span>hrs</span></div>
+            </div>
+          </div>
+          
+        </div>
+     
+  
+  </div>
+
+  <div class="card  relative rounded-xl h-[160px] bg-limeGreenExercise overflow-hidden md:h-[245px]">
+    <img src="images/icon-exercise.svg" alt="icon" class="ml-[230px]  relative z-0 md:ml-[160px]" />
+        <div class="card-info bg-darkBlue h-[80%] mt-3 rounded-xl flex justify-between cursor-pointer hover:bg-desaturatedBlue hover:text-white hover:font-extrablack relative -top-7 md:-top-[18px] md:flex-col md:justify-center">
+          <a href="#ellipsis" class="ellipsis-icon hidden md:flex  top-0 right-0 mt-8 mr-6 md:mt-0 md:mr-0 md:ml-[210px]">
+            <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+          </a>
+          <div class="left-side text-white font-rubik ml-6 mb-4 flex flex-col justify-center md:-mt-4 md:ml-8">
+            <p class="text-lg ">Exercise</p>
+            <h1 class="text-3xl font-extralight mt-1 md:mt-10 md:text-[50px] md:tracking-wide md:font-[100]">4<span>hrs</span></h1>
+          </div>
+          
+          <div class="right-side flex flex-col gap-3 justify-center items-center pl-8 pr-6 relative md:justify-start md:items-start md:pl-4">
+            <a href="#ellipsis" class="ellipsis-icon absolute top-0 right-0 mt-8 mr-6 md:hidden">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+            </a>
+            <div class="flex text-paleBlue font-rubik text-sm font-thin tracking-wider mt-4 ml-4 cursor-pointer md:mt-0 ">
+              <div class="past-time">Last Week -</div>
+              <div class="time-in-h font-rubik text-sm">5<span>hrs</span></div>
+            </div>
+          </div>
+          
+        </div>
+     
+  
+  </div>
+
+  <div class="card  relative rounded-xl h-[160px] bg-violetSocial overflow-hidden md:h-[245px]">
+    <img src="images/icon-social.svg" alt="icon" class="ml-[230px] -mt-3 relative z-0 md:ml-[160px]" />
+        <div class="card-info bg-darkBlue h-[80%] rounded-xl flex justify-between cursor-pointer hover:bg-desaturatedBlue hover:text-white hover:font-extrablack relative -top-12 md:-top-[38px] md:flex-col md:justify-center">
+          <a href="#ellipsis" class="ellipsis-icon hidden md:flex  top-0 right-0 mt-8 mr-6 md:mt-0 md:mr-0 md:ml-[210px]">
+            <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+          </a>
+          <div class="left-side text-white font-rubik ml-6 mb-4 flex flex-col justify-center md:-mt-4 md:ml-8">
+            <p class="text-lg ">Social</p>
+            <h1 class="text-3xl font-extralight mt-1 md:mt-10 md:text-[50px] md:tracking-wide md:font-[100]">5<span>hrs</span></h1>
+          </div>
+          
+          <div class="right-side flex flex-col gap-3 justify-center items-center pl-8 pr-6 relative md:justify-start md:items-start md:pl-4">
+            <a href="#ellipsis" class="ellipsis-icon absolute top-0 right-0 mt-8 mr-6 md:hidden">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+            </a>
+            <div class="flex text-paleBlue font-rubik text-sm font-thin tracking-wider mt-4 ml-4 cursor-pointer md:mt-0 ">
+              <div class="past-time">Last Week -</div>
+              <div class="time-in-h font-rubik text-sm">10<span>hrs</span></div>
+            </div>
+          </div>
+          
+        </div>
+     
+  
+  </div>
+
+  
+
+  <div class="card  relative rounded-xl h-[160px] bg-softOrangeSelfcare overflow-hidden md:h-[245px]">
+    <img src="images/icon-self-care.svg" alt="icon" class="ml-[230px] -mt-3 relative z-0 md:ml-[160px]" />
+        <div class="card-info bg-darkBlue h-[80%] rounded-xl flex justify-between cursor-pointer hover:bg-desaturatedBlue hover:text-white hover:font-extrablack relative -top-5 md:-top-[6px] md:flex-col md:justify-center">
+          <a href="#ellipsis" class="ellipsis-icon hidden md:flex  top-0 right-0 mt-8 mr-6 md:mt-0 md:mr-0 md:ml-[210px]">
+            <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+          </a>
+          <div class="left-side text-white font-rubik ml-6 mb-4 flex flex-col justify-center md:-mt-4 md:ml-8">
+            <p class="text-lg ">Self Care</p>
+            <h1 class="text-3xl font-extralight mt-1 md:mt-10 md:text-[50px] md:tracking-wide md:font-[100]">2<span>hrs</span></h1>
+          </div>
+          
+          <div class="right-side flex flex-col gap-3 justify-center items-center pl-8 pr-6 relative md:justify-start md:items-start md:pl-4">
+            <a href="#ellipsis" class="ellipsis-icon absolute top-0 right-0 mt-8 mr-6 md:hidden">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis-icon" class="" />
+            </a>
+            <div class="flex text-paleBlue font-rubik text-sm font-thin tracking-wider mt-4 ml-4 cursor-pointer md:mt-0 ">
+              <div class="past-time">Last Week -</div>
+              <div class="time-in-h font-rubik text-sm">2<span>hrs</span></div>
+            </div>
+          </div>
+          
+        </div>
+     
+  
+  </div>
+
+</div>
+  
+
+  <script src="js/script.js" ></script>
+</body>
+</html>
